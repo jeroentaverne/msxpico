@@ -119,3 +119,29 @@ v1.29:
 - Better size unity view
 - Some cosmetic menu changes and LED settings changed
 - Add Blade Lords
+
+v1.30:
+- Add auto start option for a game at powerup (how this works is only available to museums!)
+- Hopefully fixed the problem that SCC does not give sound when using vgmplay
+- Remove A1-Spirit
+- Fix Aleste 2 not working
+
+v1.31:
+
+- Add partition (max 10) selection by pressing key 1,2,3,4,5,6,7,8,9,0
+- Show partition volume label in top line
+- Add support for MGSPICO hardware (see https://github.com/cliffgraph/MGSPICO)
+
+v1.32:
+
+- Fix red LED hang problem when changing sound settings
+- Add MGSPICO support. Some MGS files have issues.
+- Replace Nemesis 1 ROM with enhanced version
+
+v1.33:
+
+- Possible fix for SD not found in Nextor
+- Disable ROM auto start as it could be accidently enabled
+- Add SCC readback in Konami SCC mapper so it's detected by Maze of Galious Enhanced version
+- Enhance FMPAC game detection so USAS Enhanced is not detected as a game with FM-PAC
+- Simplify sound mixing, just use mono. MP3 is still stereo.
