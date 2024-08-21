@@ -102,11 +102,11 @@
 ;*************************
 
 ;--- SM-X ROM is less verbose...
-SMX_ROM:				equ	1
+SMX_ROM:				equ	0
 ;--- Non-FPGA versions do not check OCM hardware...
-CHECK_OCM_HW:			equ	1
+CHECK_OCM_HW:			equ	0
 ;--- FPGA Version can have the Turbo-R logo incorporated or not...
-TURBO_R_LOGO:			equ	1
+TURBO_R_LOGO:			equ	0
 
 ;*******************
 ;***  CONSTANTS  ***
@@ -234,6 +234,12 @@ INIT:
 	ld	(LINLEN),a					; for the current text mode
 	xor	a							; A = 0
 	ld	(CLIKSW),a					; when key press, click disabled
+	
+	; Alternative way to get into setup menu
+	ld a,(#7000)
+	cp 0
+	jp	z,ENTERING_ESPSETUP			; Setup is forced, let's execute our setup menu
+	
 	ld	a,6
 	call	SNSMAT
 	bit	5,a							; Test [F1]
@@ -509,6 +515,12 @@ PATCH_H_TIMI:
 ESPSETUP.EXIT:
 	ld	a,CLS
 	call	CHPUT
+
+	; Alternative way to get out of setup menu
+	ld a,(#7000)
+	cp 0
+	jp z, 0
+
 	jp	INIT_UNAPI					; When done, resume initialization
 ENTERING_ESPSETUP:
 	ld	a,#FE						; Preset #FE, unexpected error
