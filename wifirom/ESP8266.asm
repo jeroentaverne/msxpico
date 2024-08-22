@@ -230,10 +230,10 @@ INIT:
 	ret	z							; if yes, return, it is Unknown or a generic MSX system
 	; Ok, ID = 2 "SM-X" or ID > 2 "Newer Machines"
 	endif
-	ld	a,29						; ensures width 29
-	ld	(LINLEN),a					; for the current text mode
-	xor	a							; A = 0
-	ld	(CLIKSW),a					; when key press, click disabled
+	;ld	a,29						; ensures width 29
+	;ld	(LINLEN),a					; for the current text mode
+	;xor	a						; A = 0
+	;ld	(CLIKSW),a					; when key press, click disabled
 	
 	; Alternative way to get into setup menu
 	ld a,(#7000)
@@ -5585,7 +5585,8 @@ ENTERING_WIFI_SETUP:
 ;---
 
 WELCOME:
-	db	CLS
+	;db	CLS
+	db	CR,LF
 	db	"ESP8266 TCP/IP UNAPI 1.2"		,CR,LF
 	db	"(c)2020 Oduvaldo Pavan Junior"	,GOLEFT,CR,LF
 	db	"ducasp@gmail.com"				,CR,LF,LF,STTERMINATOR
