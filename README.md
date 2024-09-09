@@ -1,1 +1,1 @@
-Thanks to Cayce, the manual moved here: https://github.com/jeroentaverne/msxpico/wiki
+Thanks to Cayce, the much improved manual can be found here: https://github.com/jeroentaverne/msxpico/wiki
