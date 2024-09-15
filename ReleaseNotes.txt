@@ -145,3 +145,12 @@ v1.33:
 - Add SCC readback in Konami SCC mapper so it's detected by Maze of Galious Enhanced version
 - Enhance FMPAC game detection so USAS Enhanced is not detected as a game with FM-PAC
 - Simplify sound mixing, just use mono. MP3 is still stereo.
+
+v1.34:
+
+- New FAT FS driver to support RP2350 builds
+- Add WIFI detection, so WIFI does not need to be enabled in settings
+- Add separate menu item for WIFI with Nextor
+- New MSX Pico WIFI ROM with help of Oduvaldo Pavan Junior using memory mapped IO
+- Add WIFI quick receive support
+- Show used slot in help screen
