@@ -148,6 +148,7 @@ v1.33:
 
 v1.34:
 
+- Add second fire button support to be used as <ESC>, this also helps in better MP3 player handling
 - New FAT FS driver to support RP2350 builds
 - Add WIFI detection, so WIFI does not need to be enabled in settings
 - Add separate menu item for WIFI with Nextor
