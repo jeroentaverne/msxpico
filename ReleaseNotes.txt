@@ -155,3 +155,9 @@ v1.34:
 - New MSX Pico WIFI ROM with help of Oduvaldo Pavan Junior using memory mapped IO
 - Add WIFI quick receive support
 - Show used slot in help screen
+
+v1.35:
+
+- Fix pressing <ESC> on WIFI version
+- Fix hardware version reading and WIFI detection on RP2350
+- Improved WIFI LED (yellow) blinking
