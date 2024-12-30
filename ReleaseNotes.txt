@@ -36,6 +36,10 @@ v1.16:
 - Copy internal ROM to RAM if it is available and fits for better performance
 - Small menu adjustments
 
+v1.17: skipped
+v1.18: skipped
+v1.19: skipped
+
 v1.20:
 - More internal games
 - Make it possible to load special .cat files (catalog of ROMs to replace internal ROMs)
@@ -161,3 +165,24 @@ v1.35:
 - Fix pressing <ESC> on WIFI version
 - Fix hardware version reading and WIFI detection on RP2350
 - Improved WIFI LED (yellow) blinking
+
+v1.36: skipped
+
+v1.37:
+
+- Revert to old SD FS driver as there were issues in v1.34 and v1.35
+- Restore BC and HL registers when exiting menu
+- Use better interrupt enable and disable routines for better stability during FLASH programming
+- Add Telnet ROM in menu
+- Add direct terminal access to WIFI module by pressing shift + T (only usefull for developers!)
+- Reduce RAM usage to prepare for extra functionality
+- Bigger ROM database for improved mapper type detection
+- Improved WIFI LED blinking
+
+v1.38:
+
+- Add Gamemaster 2 support, but currently without save to SRAM or SDCARD
+
+v1.39:
+
+- Gamemaster disabled by default
