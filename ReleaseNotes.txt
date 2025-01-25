@@ -1,0 +1,188 @@
+v1.09:
+- Add support for Konami Ultimate ROM (Nemesis doesn't start for some reason)
+- Increase activity timeout to 50msec, still fast response to reset button
+
+v1.10:
+- Add option for Nextor without RAM in main slot to get some SCC demos working
+- Update Nextor to 2.1.2
+
+v1.11:
+- Simplify SPI transfers to SD card
+
+v1.12:
+- Add more built in Konami games
+- Add option for SCC+ only in main slot
+- Switch to screen 1 before starting ROM, Kings Valley 1 needs this
+
+v1.13:
+- Page up/down using shift+up/down
+- Search by pressing first letter of name
+- Show help page by pressing HOME key.
+
+v1.14:
+- Add MSX1 detection
+- Add menu screen support for MSX1
+- Do not show MSX2 internal ROMs on MSX1
+
+v1.15:
+- Special build with only MSX1 games
+
+v1.16:
+- Show green LED when update is succesfull
+- Modify reset detection to avoid crashes on Turbo-R and pause button press
+- Fix problems with SD card on Turbo-R
+- Add slot expander detection
+- Reduce wait time on IO access by using filter and disable DAC
+- Copy internal ROM to RAM if it is available and fits for better performance
+- Small menu adjustments
+
+v1.17: skipped
+v1.18: skipped
+v1.19: skipped
+
+v1.20:
+- More internal games
+- Make it possible to load special .cat files (catalog of ROMs to replace internal ROMs)
+- Use PSG2 and SCC at the same time (Usas Enhanced)
+- Make it possible to load ROM files till 15MB
+- Show progress bar when loading ROMs
+- Improve letter search, pressing multiple times jumps no next item
+- No reboot when selecting SCC Only
+- Fix problem files not loading with very long filenames
+- Partial 7MHz support, not working at all times
+
+v1.21/v1.22:
+- Fix SCC sound distortion
+- Enable support for mono hardware withoud stereo DAC
+- Fix menu problem on MSX1
+- Do not show mappertype on MSX1 to give the name more room
+- Show inverted manual options when starting a ROM
+- Add Turbo mode option when starting a ROM
+- Add mono mix option when starting a ROM
+- Add FM PAC ROM support (disabled)
+
+v1.23:
+- Add basic joystick control
+- Wait for SLTSL on read cycles for better compatibility
+- Use MIDI TX enable/disable to get better performance
+
+v1.24:
+- Add MIDI enable/disable
+- Add PSG2 enable/disable
+- Add configuration screen with settings store in FLASH
+- Show configuration screen when starting a ROM
+- Skip impossible frequency change on MSX1
+- Disable size sorting when search for letter
+- Add / replace some games
+- GUI / menu code cleanup
+
+v1.25:
+- Modify configuration screen so it can be controlled by joystick as well
+- Add option to disable the LED
+- Add option to disable PSG1 to avoid internal and emulated PSGs playing the same sound
+- Add option for experimental speed improvement (use at own risk)
+- Add option to show files on SD card at startup
+
+v1.26:
+- More than double entries in one directory possible
+- Show warning when there are too many entries in directory
+- Sound emulation now uses FIFO to communicate between the two cores
+- Add MSX Music emulation and the required detection by a ROM
+- Add FMPAC BASIC BIOS (call fmpac can be executed)
+- Add switching between 3 different SCC+, MSX Music setups
+- Switch between SCC+ and MSM Music by pressing <INS> key
+- Add extra settings for MSX Music
+- Add reboot with extra RAM to boot from real floppy
+- Less brightness of sound level LED
+- Fix FLASH programming sometimes crashing
+- Add support for Sony XV-T550 videotitler, games can be played using joystick
+- Add setting to prevent exit by only pressing <SHIFT>
+- Add setting for to show files at startup
+- Add support for starting in a certain dir (create startdir.txt, do not use (back)slash)
+- Enabled experimental single disk emulation
+
+v1.27:
+- Enable MSX Music & SCC by default in settings
+- Disable <TAB> key when music is playing as its functionality is broken for now
+- Manual volume control for PSG,SCC,MSX-MUSIC,MP3 in config screen
+- Increase free RAM by optimizing MSX-MUSIC emulation
+- Add automatic FMPAC save game file load/save (only possible when loading games from SD card in MSX Pico files screen)
+- Fix wrong LED color at powerup on some MSX Pico cartridges (should be temporary RED)
+- Play SCC also on left channel if PSG is silent
+
+v1.28:
+- Rename "MSX Music" to "FM-PAC" in menu
+- Make FM-PAC sound working in Konami5 mapper (used for Super Mario World)
+- Load/save mapper type when manually changed
+
+v1.29:
+- Fix writing FM_PAC SRAM data with wrong filename
+- Only show supported files
+- Fix TAB key when music is playing
+- Add <SHIFT>+<E> key option for erasing ROM catalog
+- Better size unity view
+- Some cosmetic menu changes and LED settings changed
+- Add Blade Lords
+
+v1.30:
+- Add auto start option for a game at powerup (how this works is only available to museums!)
+- Hopefully fixed the problem that SCC does not give sound when using vgmplay
+- Remove A1-Spirit
+- Fix Aleste 2 not working
+
+v1.31:
+
+- Add partition (max 10) selection by pressing key 1,2,3,4,5,6,7,8,9,0
+- Show partition volume label in top line
+- Add support for MGSPICO hardware (see https://github.com/cliffgraph/MGSPICO)
+
+v1.32:
+
+- Fix red LED hang problem when changing sound settings
+- Add MGSPICO support. Some MGS files have issues.
+- Replace Nemesis 1 ROM with enhanced version
+
+v1.33:
+
+- Possible fix for SD not found in Nextor
+- Disable ROM auto start as it could be accidently enabled
+- Add SCC readback in Konami SCC mapper so it's detected by Maze of Galious Enhanced version
+- Enhance FMPAC game detection so USAS Enhanced is not detected as a game with FM-PAC
+- Simplify sound mixing, just use mono. MP3 is still stereo.
+
+v1.34:
+
+- Add second fire button support to be used as <ESC>, this also helps in better MP3 player handling
+- New FAT FS driver to support RP2350 builds
+- Add WIFI detection, so WIFI does not need to be enabled in settings
+- Add separate menu item for WIFI with Nextor
+- New MSX Pico WIFI ROM with help of Oduvaldo Pavan Junior using memory mapped IO
+- Add WIFI quick receive support
+- Show used slot in help screen
+
+v1.35:
+
+- Fix pressing <ESC> on WIFI version
+- Fix hardware version reading and WIFI detection on RP2350
+- Improved WIFI LED (yellow) blinking
+
+v1.36: skipped
+
+v1.37:
+
+- Revert to old SD FS driver as there were issues in v1.34 and v1.35
+- Restore BC and HL registers when exiting menu
+- Use better interrupt enable and disable routines for better stability during FLASH programming
+- Add Telnet ROM in menu
+- Add direct terminal access to WIFI module by pressing shift + T (only usefull for developers!)
+- Reduce RAM usage to prepare for extra functionality
+- Bigger ROM database for improved mapper type detection
+- Improved WIFI LED blinking
+
+v1.38:
+
+- Add Gamemaster 2 support, but currently without save to SRAM or SDCARD
+
+v1.39:
+
+- Gamemaster disabled by default
