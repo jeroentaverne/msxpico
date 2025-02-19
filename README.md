@@ -1,3 +1,3 @@
-Thanks to Cayce, the much improved manual can be found here: https://github.com/jeroentaverne/msxpico/wiki
+Real website is up now: http://www.msxpico.com
 
 If someone wants to start producing MSX Pico cartridges, please send me an email: msxpico@gmail.com
